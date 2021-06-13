@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         int LastDays = cal.getActualMaximum(Calendar.DATE);
         int dayofweek = cal.get(Calendar.DAY_OF_WEEK);
 <<<<<<< HEAD
+<<<<<<< HEAD
         int j = 0;
         Calendar firstmonth = Calendar.getInstance();
         firstmonth.set(year, month, 1);
@@ -58,6 +59,23 @@ public class MainActivity extends AppCompatActivity {
             items[i]=""+j;
 >>>>>>> b59704bbd0824139f10ad4b6768b5aadc804c97e
         }
+=======
+        int j=0;
+        Calendar firstmonth = Calendar.getInstance();
+        firstmonth.set(year,month,1);
+        getSupportActionBar().setTitle(year + "년" + (month+1) + "월");
+
+        String[] items = new String[42];
+        int dow = (firstmonth.get(Calendar.DAY_OF_WEEK)-1);
+        for (int i=0; i<42;i++) {
+            items[i] = "";
+        }
+        int lastDate = firstmonth.getActualMaximum(Calendar.DATE);
+        for (int i =(dow); i<lastDate+dow; i++) {
+            j++;
+            items[i]=""+j;
+        }
+>>>>>>> b59704bbd0824139f10ad4b6768b5aadc804c97e
 
         //어댑터 준비 (배열 객체 이용, simple_list_item_1 리소스 사용
         ArrayAdapter<String> adapt
@@ -77,7 +95,11 @@ public class MainActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Toast.makeText(getApplicationContext(), year + "." + (month + 1) + "." + (position - 1),
+=======
+                Toast.makeText(getApplicationContext(),year+"."+(month+1)+"."+ (position-1),
+>>>>>>> b59704bbd0824139f10ad4b6768b5aadc804c97e
 =======
                 Toast.makeText(getApplicationContext(),year+"."+(month+1)+"."+ (position-1),
 >>>>>>> b59704bbd0824139f10ad4b6768b5aadc804c97e
@@ -87,11 +109,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public void onClick(View view) {
         Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
         startActivity(intent);
     }
+=======
+>>>>>>> b59704bbd0824139f10ad4b6768b5aadc804c97e
 =======
 >>>>>>> b59704bbd0824139f10ad4b6768b5aadc804c97e
 // 달력 부분 프래그넌트로 만들기
